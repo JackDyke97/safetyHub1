@@ -13,7 +13,7 @@ import ProfileScreen from './ProfileScreen';
 import TasksScreen from './TasksScreen';
 import FilesScreen from './FilesScreen';
 import FormsScreen from './FormsScreen';
-
+import LearnScreen from "./LearnScreen";
 
 // const TasksStack = createStackNavigator();
 // const ProfileStack = createStackNavigator();
@@ -21,55 +21,54 @@ import FormsScreen from './FormsScreen';
 const Tab = createBottomTabNavigator();
 
 const MainTabsScreen = () => (
-<Tab.Navigator
-      initialRouteName="Tasks"
-      activeColor="#EE6457"
-      barStyle={{ backgroundColor: '#EEEEEE' }}
-    >
-      <Tab.Screen
-        name="Tasks"
-        component={TasksScreen}
-        options={{
-          tabBarLabel: 'Tasks',
-          tabBarIcon: ({ color }) => (
-            <FontAwesome5 name="tasks" color={color} size={26} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Forms"
-        component={FormsScreen}
-        options={{
-          tabBarLabel: 'Forms',
-          tabBarIcon: ({ color }) => (
-            <AntDesign name="form" color={color} size={26} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Files"
-        component={FilesScreen}
-        options={{
-          tabBarLabel: 'Files',
-          tabBarIcon: ({ color }) => (
-            <SimpleLineIcons name="folder-alt" color={color} size={25} />
-          ),
-        }}
-      />
- 
-      <Tab.Screen
-        name="Profile"
-        component={ProfileScreen}
-        options={{
-          tabBarLabel: 'Profile',
-          tabBarIcon: ({ color }) => (
-            <SimpleLineIcons name="user" color={color} size={26} />
-          ),
-        }}
-      />
-    </Tab.Navigator>
+  <Tab.Navigator
+    initialRouteName="Tasks"
+    activeColor="#034C5F"
+    inactiveColor="#034C5F"
+    barStyle={{ backgroundColor: "#F9C4BA" }}
+  >
+    <Tab.Screen
+      name="Tasks"
+      component={TasksScreen}
+      options={{
+        tabBarLabel: "Tasks",
+        tabBarIcon: ({ color }) => (
+          <FontAwesome5 name="tasks" color={color} size={24} />
+        ),
+      }}
+    />
+    <Tab.Screen
+      name="Forms"
+      component={FormsScreen}
+      options={{
+        tabBarLabel: "Forms",
+        tabBarIcon: ({ color }) => (
+          <AntDesign name="form" color={color} size={29} />
+        ),
+      }}
+    />
+    <Tab.Screen
+      name="Files"
+      component={FilesScreen}
+      options={{
+        tabBarLabel: "Files",
+        tabBarIcon: ({ color }) => (
+          <SimpleLineIcons name="folder-alt" color={color} size={24} />
+        ),
+      }}
+    />
 
-
+    <Tab.Screen
+      name="Profile"
+      component={ProfileScreen}
+      options={{
+        tabBarLabel: "Profile",
+        tabBarIcon: ({ color }) => (
+          <SimpleLineIcons name="user" color={color} size={24} />
+        ),
+      }}
+    />
+  </Tab.Navigator>
 );
 
 export default MainTabsScreen;

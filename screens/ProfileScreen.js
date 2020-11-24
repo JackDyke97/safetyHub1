@@ -18,11 +18,11 @@ const ProfileScreen = () => {
 export default ProfileScreen;
 
 const styles = StyleSheet.create({
-  container:{
-      backgroundColor: '#f9fafd',
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      padding: 20,
-  }
+  container: {
+    backgroundColor: "#FDF5F4",
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 20,
+  },
 });

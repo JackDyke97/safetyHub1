@@ -74,8 +74,11 @@ export default function FilesScreen() {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: "#FDF5F4",
     flex: 1,
-    backgroundColor: "#fff",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 20,
   },
   logo: {
     height: 150,

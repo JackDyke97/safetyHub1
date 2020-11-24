@@ -81,33 +81,34 @@ export default LoginScreen;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#f9fafd',
+    backgroundColor: "#FDF5F4",
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     padding: 20,
   },
   logo: {
     height: 150,
     width: 150,
-    resizeMode: 'cover',
+    resizeMode: "cover",
   },
   text: {
-    fontFamily: 'Kufam-SemiBoldItalic',
+    fontFamily: "HelveticaNeue-Medium",
     fontSize: 28,
     marginBottom: 10,
-    color: '#051d5f',
+    color: "#034C5F",
   },
   navButton: {
     marginTop: 15,
   },
   forgotButton: {
     marginVertical: 35,
+    color: "#034C5F",
   },
   navButtonText: {
     fontSize: 18,
-    fontWeight: '500',
-    color: '#2e64e5',
-    fontFamily: 'Lato-Regular',
+    fontWeight: "500",
+    color: "#034C5F",
+    fontFamily: "Lato-Regular",
   },
 });
