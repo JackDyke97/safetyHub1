@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, { useContext, useState } from "react";
 import {
   View,
   Text,
@@ -6,29 +6,26 @@ import {
   Image,
   Platform,
   StyleSheet,
-} from 'react-native';
-import FormInput from '../components/FormInput';
-import FormButton from '../components/FormButton';
-import SocialButton from '../components/SocialButton';
-import {AuthContext} from '../navigation/AuthProvider';
+} from "react-native";
+import FormInput from "../components/FormInput";
+import FormButton from "../components/FormButton";
+import SocialButton from "../components/SocialButton";
+import { AuthContext } from "../navigation/AuthProvider";
 
-const LoginScreen = ({navigation}) => {
-   const [email, setEmail] = useState();
-   const [password, setPassword] = useState();
+const LoginScreen = ({ navigation }) => {
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
 
-   const {login, googleLogin} = useContext(AuthContext);
+  const { login, googleLogin } = useContext(AuthContext);
 
   return (
     <View style={styles.container}>
-      <Image
-        source={require('../assets/logo.png')}
-        style={styles.logo}
-      />
+      <Image source={require("../assets/logo.png")} style={styles.logo} />
       <Text style={styles.text}>SafetyHub</Text>
 
       <FormInput
-       labelValue={email}
-       onChangeText={(userEmail) => setEmail(userEmail)}
+        labelValue={email}
+        onChangeText={(userEmail) => setEmail(userEmail)}
         placeholderText="Email"
         iconType="user"
         keyboardType="email-address"
@@ -53,9 +50,8 @@ const LoginScreen = ({navigation}) => {
         <Text style={styles.navButtonText}>Forgot Password?</Text>
       </TouchableOpacity>
 
-      {Platform.OS === 'android' ? (
+      {Platform.OS === "android" ? (
         <View>
-           
           <SocialButton
             buttonTitle="Sign In with Google"
             btnType="google"
@@ -68,7 +64,8 @@ const LoginScreen = ({navigation}) => {
 
       <TouchableOpacity
         style={styles.forgotButton}
-        onPress={() => navigation.navigate('Signup')}>
+        onPress={() => navigation.navigate("Signup")}
+      >
         <Text style={styles.navButtonText}>
           Don't have an acount? Create here
         </Text>

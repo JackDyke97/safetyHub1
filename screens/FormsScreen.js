@@ -1,13 +1,16 @@
-import  React from 'react';
-import { View, Text, Button, StyleSheet} from 'react-native';
+import React from "react";
+import { View, Text, Button, StyleSheet } from "react-native";
 
-const FormsScreen = ({navigation}) => {
-    return (
-        <View style={styles.container}>
-        <Text>forms Screen</Text>
-        
-      </View>
-    );
+const FormsScreen = ({ navigation }) => {
+  return (
+    <View style={styles.container}>
+      <Text>AF-1 Form</Text>
+      <Button
+        title="Click Here"
+        onPress={() => navigation.navigate("../screens/AfoneFormScreen")}
+      ></Button>
+    </View>
+  );
 };
 
 export default FormsScreen;
